@@ -1,0 +1,928 @@
+/* Variables for Light and Dark Theme */
+:root {
+    /* Light Theme Colors */
+    --background-color-light: #f4f4f4;
+    --text-color-light: #333;
+    --header-footer-bg-light: #333;
+    --header-footer-text-light: #fff;
+    --section-bg-light: #fff;
+    --border-color-light: #ddd;
+    --link-color-light: #007bff;
+    --primary-btn-bg-light: #007bff;
+    --primary-btn-text-light: #fff;
+    --secondary-btn-bg-light: #6c757d;
+    --secondary-btn-text-light: #fff;
+    --hover-color-light: #0056b3;
+    --project-item-bg-light: #f9f9f9;
+    --whatsapp-btn-bg-light: #25D366;
+    --whatsapp-btn-text-light: #fff;
+    --scroll-btn-bg-light: rgba(51, 51, 51, 0.7);
+    --scroll-btn-text-light: #fff;
+    --chatbot-header-bg-light: #007bff;
+    --chatbot-header-text-light: #fff;
+    --chatbot-bg-light: #fff;
+    --chatbot-border-light: #ccc;
+    --chatbot-input-bg-light: #eee;
+    --chatbot-input-text-light: #333;
+    --bot-message-bg-light: #e2e2e2;
+    --user-message-bg-light: #007bff;
+    --user-message-text-light: #fff;
+}
+
+/* Dark Theme Colors */
+body.dark-theme {
+    --background-color-dark: #282c36;
+    --text-color-dark: #e0e0e0;
+    --header-footer-bg-dark: #1e2128;
+    --header-footer-text-dark: #e0e0e0;
+    --section-bg-dark: #3a3f4a;
+    --border-color-dark: #4a4f5a;
+    --link-color-dark: #61dafb;
+    --primary-btn-bg-dark: #61dafb;
+    --primary-btn-text-dark: #1e2128;
+    --secondary-btn-bg-dark: #555c66;
+    --secondary-btn-text-dark: #e0e0e0;
+    --hover-color-dark: #21a1f1;
+    --project-item-bg-dark: #4a4f5a;
+    --whatsapp-btn-bg-dark: #25D366; /* Keep WhatsApp green */
+    --whatsapp-btn-text-dark: #fff;
+    --scroll-btn-bg-dark: rgba(224, 224, 224, 0.7);
+    --scroll-btn-text-dark: #333;
+    --chatbot-header-bg-dark: #61dafb;
+    --chatbot-header-text-dark: #1e2128;
+    --chatbot-bg-dark: #3a3f4a;
+    --chatbot-border-dark: #555c66;
+    --chatbot-input-bg-dark: #4a4f5a;
+    --chatbot-input-text-dark: #e0e0e0;
+    --bot-message-bg-dark: #555c66;
+    --user-message-bg-dark: #61dafb;
+    --user-message-text-dark: #1e2128;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark-theme {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--header-footer-bg-light);
+    color: var(--header-footer-text-light);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body.dark-theme header {
+    background-color: var(--header-footer-bg-dark);
+    color: var(--header-footer-text-dark);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--header-footer-text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .logo a {
+    color: var(--header-footer-text-dark);
+}
+
+.logo a:hover {
+    color: var(--link-color-light); /* Or a specific highlight color */
+}
+body.dark-theme .logo a:hover {
+    color: var(--link-color-dark);
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--header-footer-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme nav ul li a {
+    color: var(--header-footer-text-dark);
+}
+
+nav ul li a:hover {
+    color: var(--link-color-light);
+}
+
+body.dark-theme nav ul li a:hover {
+    color: var(--link-color-dark);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--header-footer-text-light);
+    margin-left: 20px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .theme-toggle {
+    color: var(--header-footer-text-dark);
+}
+
+.theme-toggle:hover {
+    color: var(--link-color-light);
+}
+
+body.dark-theme .theme-toggle:hover {
+    color: var(--link-color-dark);
+}
+
+.theme-toggle .light-icon { display: block; }
+.theme-toggle .dark-icon { display: none; }
+body.dark-theme .theme-toggle .light-icon { display: none; }
+body.dark-theme .theme-toggle .dark-icon { display: block; }
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--header-footer-text-light);
+    cursor: pointer;
+}
+body.dark-theme .menu-toggle {
+    color: var(--header-footer-text-dark);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body.dark-theme .hero-section {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    object-fit: cover;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--text-color-light);
+}
+body.dark-theme .hero-text h1 {
+    color: var(--text-color-dark);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: var(--text-color-light);
+}
+body.dark-theme .hero-text p {
+    color: var(--text-color-dark);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-btn {
+    background-color: var(--primary-btn-bg-light);
+    color: var(--primary-btn-text-light);
+}
+.primary-btn:hover {
+    background-color: var(--hover-color-light);
+}
+body.dark-theme .primary-btn {
+    background-color: var(--primary-btn-bg-dark);
+    color: var(--primary-btn-text-dark);
+}
+body.dark-theme .primary-btn:hover {
+    background-color: var(--hover-color-dark);
+}
+
+.secondary-btn {
+    background-color: var(--secondary-btn-bg-light);
+    color: var(--secondary-btn-text-light);
+}
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+body.dark-theme .secondary-btn {
+    background-color: var(--secondary-btn-bg-dark);
+    color: var(--secondary-btn-text-dark);
+}
+body.dark-theme .secondary-btn:hover {
+    background-color: #444a50;
+}
+
+/* Sections */
+.section {
+    padding: 60px 0;
+    background-color: var(--section-bg-light);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+body.dark-theme .section {
+    background-color: var(--section-bg-dark);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: var(--text-color-light);
+    position: relative;
+    display: inline-block;
+}
+body.dark-theme .section h2 {
+    color: var(--text-color-dark);
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--link-color-light);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+body.dark-theme .section h2::after {
+    background-color: var(--link-color-dark);
+}
+
+/* About Section */
+.about-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--link-color-light);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+body.dark-theme .profile-pic {
+    border-color: var(--link-color-dark);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-color-light);
+}
+body.dark-theme .about-content p {
+    color: var(--text-color-dark);
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-item {
+    background-color: var(--project-item-bg-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color-light);
+}
+
+body.dark-theme .project-item {
+    background-color: var(--project-item-bg-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color-dark);
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+body.dark-theme .project-item:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--text-color-light);
+}
+body.dark-theme .project-item h3 {
+    color: var(--text-color-dark);
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: var(--text-color-light);
+}
+body.dark-theme .project-item p {
+    color: var(--text-color-dark);
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--link-color-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+body.dark-theme .project-link {
+    color: var(--link-color-dark);
+}
+
+.project-link:hover {
+    color: var(--hover-color-light);
+}
+body.dark-theme .project-link:hover {
+    color: var(--hover-color-dark);
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.skill-category {
+    background-color: var(--project-item-bg-light); /* Reuse project item bg */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color-light);
+}
+body.dark-theme .skill-category {
+    background-color: var(--project-item-bg-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-color: var(--border-color-dark);
+}
+
+.skill-category h3 {
+    margin-top: 0;
+    font-size: 1.6rem;
+    color: var(--link-color-light);
+    margin-bottom: 15px;
+}
+body.dark-theme .skill-category h3 {
+    color: var(--link-color-dark);
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-category li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+    color: var(--text-color-light);
+}
+body.dark-theme .skill-category li {
+    color: var(--text-color-dark);
+}
+
+.skill-category li::before {
+    content: '•'; /* Bullet point */
+    color: var(--link-color-light);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+body.dark-theme .skill-category li::before {
+    color: var(--link-color-dark);
+}
+
+/* Contact Section */
+.contact-info {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: var(--link-color-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+body.dark-theme .contact-info a {
+    color: var(--link-color-dark);
+}
+
+.contact-info a:hover {
+    color: var(--hover-color-light);
+}
+body.dark-theme .contact-info a:hover {
+    color: var(--hover-color-dark);
+}
+
+.contact-info .fas, .contact-info .fab {
+    margin-right: 10px;
+    color: var(--primary-btn-bg-light); /* Icon color */
+}
+body.dark-theme .contact-info .fas, body.dark-theme .contact-info .fab {
+    color: var(--primary-btn-bg-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-footer-bg-light);
+    color: var(--header-footer-text-light);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+body.dark-theme footer {
+    background-color: var(--header-footer-bg-dark);
+    color: var(--header-footer-text-dark);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 90px; /* Adjust based on scroll buttons */
+    right: 20px;
+    background-color: var(--whatsapp-btn-bg-light);
+    color: var(--whatsapp-btn-text-light);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    z-index: 999;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Scroll To Top/Down Buttons */
+.scroll-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.scroll-btn {
+    background-color: var(--scroll-btn-bg-light);
+    color: var(--scroll-btn-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+    opacity: 0; /* Hidden by default, shown by JS */
+    pointer-events: none; /* Prevents interaction when hidden */
+}
+
+body.dark-theme .scroll-btn {
+    background-color: var(--scroll-btn-bg-dark);
+    color: var(--scroll-btn-text-dark);
+}
+
+.scroll-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.scroll-btn:hover {
+    transform: translateY(-3px);
+    background-color: var(--hover-color-light); /* Darker shade of button */
+}
+body.dark-theme .scroll-btn:hover {
+    background-color: var(--hover-color-dark);
+}
+
+.scroll-to-bottom {
+    display: none; /* Hide by default, show based on scroll position in JS */
+}
+
+/* AI Chatbot Placeholder */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Position on the left */
+    z-index: 998; /* Below WhatsApp and Scroll buttons */
+}
+
+.chatbot-toggle-btn {
+    background-color: var(--primary-btn-bg-light);
+    color: var(--primary-btn-text-light);
+    border: none;
+    border-radius: 50px; /* Pill shape */
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+body.dark-theme .chatbot-toggle-btn {
+    background-color: var(--primary-btn-bg-dark);
+    color: var(--primary-btn-text-dark);
+}
+
+.chatbot-toggle-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--hover-color-light);
+}
+body.dark-theme .chatbot-toggle-btn:hover {
+    background-color: var(--hover-color-dark);
+}
+
+.chatbot-popup {
+    background-color: var(--chatbot-bg-light);
+    border: 1px solid var(--chatbot-border-light);
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    bottom: 70px; /* Position above the toggle button */
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(10px) scale(0.95);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+body.dark-theme .chatbot-popup {
+    background-color: var(--chatbot-bg-dark);
+    border-color: var(--chatbot-border-dark);
+}
+
+.chatbot-popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.chatbot-header {
+    background-color: var(--chatbot-header-bg-light);
+    color: var(--chatbot-header-text-light);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: grab; /* Indicates draggable (if implemented) */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+body.dark-theme .chatbot-header {
+    background-color: var(--chatbot-header-bg-dark);
+    color: var(--chatbot-header-text-dark);
+}
+
+.chatbot-header h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: var(--chatbot-header-text-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+body.dark-theme .chatbot-close-btn {
+    color: var(--chatbot-header-text-dark);
+}
+.chatbot-close-btn:hover {
+    color: #ffdddd;
+}
+body.dark-theme .chatbot-close-btn:hover {
+    color: #ffdddd;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--chatbot-bg-light);
+    color: var(--text-color-light);
+}
+body.dark-theme .chatbot-messages {
+    background-color: var(--chatbot-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+}
+
+.bot-message {
+    background-color: var(--bot-message-bg-light);
+    align-self: flex-start;
+    border-bottom-left-radius: 2px;
+}
+body.dark-theme .bot-message {
+    background-color: var(--bot-message-bg-dark);
+}
+
+.user-message {
+    background-color: var(--user-message-bg-light);
+    color: var(--user-message-text-light);
+    align-self: flex-end;
+    border-bottom-right-radius: 2px;
+}
+body.dark-theme .user-message {
+    background-color: var(--user-message-bg-dark);
+    color: var(--user-message-text-dark);
+}
+
+.chatbot-input-area {
+    display: flex;
+    padding: 10px 15px;
+    border-top: 1px solid var(--chatbot-border-light);
+    gap: 10px;
+}
+body.dark-theme .chatbot-input-area {
+    border-top-color: var(--chatbot-border-dark);
+}
+
+.chatbot-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--chatbot-border-light);
+    border-radius: 20px;
+    font-size: 1rem;
+    background-color: var(--chatbot-input-bg-light);
+    color: var(--chatbot-input-text-light);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+body.dark-theme .chatbot-input {
+    border-color: var(--chatbot-border-dark);
+    background-color: var(--chatbot-input-bg-dark);
+    color: var(--chatbot-input-text-dark);
+}
+.chatbot-input:focus {
+    border-color: var(--primary-btn-bg-light);
+}
+body.dark-theme .chatbot-input:focus {
+    border-color: var(--primary-btn-bg-dark);
+}
+
+.chatbot-send-btn {
+    background-color: var(--primary-btn-bg-light);
+    color: var(--primary-btn-text-light);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+body.dark-theme .chatbot-send-btn {
+    background-color: var(--primary-btn-bg-dark);
+    color: var(--primary-btn-text-dark);
+}
+.chatbot-send-btn:hover {
+    background-color: var(--hover-color-light);
+    transform: scale(1.05);
+}
+body.dark-theme .chatbot-send-btn:hover {
+    background-color: var(--hover-color-dark);
+}
+
+.chatbot-disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+    text-align: center;
+    padding: 5px 15px 10px;
+    border-top: 1px dashed var(--chatbot-border-light);
+    margin-top: -1px; /* Overlap border to make it look connected */
+}
+body.dark-theme .chatbot-disclaimer {
+    color: #aaa;
+    border-top-color: var(--chatbot-border-dark);
+}
+
+
+/* Responsive Design (Mobile-Friendly) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hidden by default */
+        background-color: var(--header-footer-bg-light);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        z-index: 900;
+        padding: 10px 0;
+    }
+    body.dark-theme nav ul {
+        background-color: var(--header-footer-bg-dark);
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger menu on mobile */
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+
+    .theme-toggle {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        margin-left: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        display: block;
+        margin: 15px auto;
+        width: 80%;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 20px;
+    }
+
+    .project-grid, .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chatbot-popup {
+        width: 90%; /* Make chatbot wider on small screens */
+        max-width: 350px; /* Cap max width */
+        left: 50%;
+        transform: translateX(-50%) translateY(10px) scale(0.95);
+        bottom: 70px;
+    }
+    .chatbot-popup.active {
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    .chatbot-container {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px; /* Move toggle button lower */
+    }
+    .whatsapp-btn {
+        bottom: 130px; /* Adjust WhatsApp button position */
+    }
+}
