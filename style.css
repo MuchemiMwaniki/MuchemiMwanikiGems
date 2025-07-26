@@ -1,62 +1,62 @@
-/* Variables for Light and Dark Theme */
+/* Variables for Black & Gold Theme */
 :root {
-    /* Light Theme Colors */
-    --background-color-light: #f4f4f4;
-    --text-color-light: #333;
-    --header-footer-bg-light: #333;
-    --header-footer-text-light: #fff;
-    --section-bg-light: #fff;
-    --border-color-light: #ddd;
-    --link-color-light: #007bff;
-    --primary-btn-bg-light: #007bff;
-    --primary-btn-text-light: #fff;
-    --secondary-btn-bg-light: #6c757d;
-    --secondary-btn-text-light: #fff;
-    --hover-color-light: #0056b3;
-    --project-item-bg-light: #f9f9f9;
-    --whatsapp-btn-bg-light: #25D366;
+    /* "Light" Theme (Primary Dark Mode with Gold Accents) */
+    --background-color-light: #1a1a1a; /* Deep Black */
+    --text-color-light: #FFD700; /* Gold */
+    --header-footer-bg-light: #000000; /* Pure Black */
+    --header-footer-text-light: #FFD700; /* Gold */
+    --section-bg-light: #2c2c2c; /* Dark Grey/Soft Black */
+    --border-color-light: #444444; /* Darker grey for borders */
+    --link-color-light: #FFD700; /* Gold */
+    --primary-btn-bg-light: #FFD700; /* Gold */
+    --primary-btn-text-light: #000000; /* Black */
+    --secondary-btn-bg-light: #3a3a3a; /* Darker grey */
+    --secondary-btn-text-light: #FFD700; /* Gold */
+    --hover-color-light: #FFC400; /* Brighter Gold for hover */
+    --project-item-bg-light: #222222; /* Slightly lighter black */
+    --whatsapp-btn-bg-light: #25D366; /* Keep WhatsApp green for recognition */
     --whatsapp-btn-text-light: #fff;
-    --scroll-btn-bg-light: rgba(51, 51, 51, 0.7);
-    --scroll-btn-text-light: #fff;
-    --chatbot-header-bg-light: #007bff;
-    --chatbot-header-text-light: #fff;
-    --chatbot-bg-light: #fff;
-    --chatbot-border-light: #ccc;
-    --chatbot-input-bg-light: #eee;
-    --chatbot-input-text-light: #333;
-    --bot-message-bg-light: #e2e2e2;
-    --user-message-bg-light: #007bff;
-    --user-message-text-light: #fff;
+    --scroll-btn-bg-light: rgba(255, 215, 0, 0.7); /* Translucent Gold */
+    --scroll-btn-text-light: #000000; /* Black */
+    --chatbot-header-bg-light: #FFD700; /* Gold */
+    --chatbot-header-text-light: #000000; /* Black */
+    --chatbot-bg-light: #222222; /* Darker black */
+    --chatbot-border-light: #444444;
+    --chatbot-input-bg-light: #333333;
+    --chatbot-input-text-light: #FFD700;
+    --bot-message-bg-light: #3a3a3a; /* Dark grey */
+    --user-message-bg-light: #FFD700; /* Gold */
+    --user-message-text-light: #000000; /* Black */
 }
 
-/* Dark Theme Colors */
+/* "Dark" Theme (Alternative Dark Mode with Gold Accents - for toggling subtle variations) */
 body.dark-theme {
-    --background-color-dark: #282c36;
-    --text-color-dark: #e0e0e0;
-    --header-footer-bg-dark: #1e2128;
-    --header-footer-text-dark: #e0e0e0;
-    --section-bg-dark: #3a3f4a;
-    --border-color-dark: #4a4f5a;
-    --link-color-dark: #61dafb;
-    --primary-btn-bg-dark: #61dafb;
-    --primary-btn-text-dark: #1e2128;
-    --secondary-btn-bg-dark: #555c66;
-    --secondary-btn-text-dark: #e0e0e0;
-    --hover-color-dark: #21a1f1;
-    --project-item-bg-dark: #4a4f5a;
-    --whatsapp-btn-bg-dark: #25D366; /* Keep WhatsApp green */
+    --background-color-dark: #121212; /* Even deeper Black */
+    --text-color-dark: #FFEB3B; /* Slightly brighter Gold */
+    --header-footer-bg-dark: #000000;
+    --header-footer-text-dark: #FFEB3B;
+    --section-bg-dark: #202020; /* Very dark grey */
+    --border-color-dark: #555555;
+    --link-color-dark: #FFEB3B;
+    --primary-btn-bg-dark: #FFEB3B;
+    --primary-btn-text-dark: #000000;
+    --secondary-btn-bg-dark: #444444;
+    --secondary-btn-text-dark: #FFEB3B;
+    --hover-color-dark: #FFDD00;
+    --project-item-bg-dark: #282828;
+    --whatsapp-btn-bg-dark: #25D366;
     --whatsapp-btn-text-dark: #fff;
-    --scroll-btn-bg-dark: rgba(224, 224, 224, 0.7);
-    --scroll-btn-text-dark: #333;
-    --chatbot-header-bg-dark: #61dafb;
-    --chatbot-header-text-dark: #1e2128;
-    --chatbot-bg-dark: #3a3f4a;
-    --chatbot-border-dark: #555c66;
-    --chatbot-input-bg-dark: #4a4f5a;
-    --chatbot-input-text-dark: #e0e0e0;
-    --bot-message-bg-dark: #555c66;
-    --user-message-bg-dark: #61dafb;
-    --user-message-text-dark: #1e2128;
+    --scroll-btn-bg-dark: rgba(255, 235, 59, 0.7); /* Translucent brighter Gold */
+    --scroll-btn-text-dark: #000000;
+    --chatbot-header-bg-dark: #FFEB3B;
+    --chatbot-header-text-dark: #000000;
+    --chatbot-bg-dark: #282828;
+    --chatbot-border-dark: #555555;
+    --chatbot-input-bg-dark: #3a3a3a;
+    --chatbot-input-text-dark: #FFEB3B;
+    --bot-message-bg-dark: #444444;
+    --user-message-bg-dark: #FFEB3B;
+    --user-message-text-dark: #000000;
 }
 
 /* Global Styles */
@@ -66,94 +66,63 @@ body {
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color: var(--background-color-light);
-    color: var(--text-color-light);
+    color: var(--text-color-light); /* Initial text color from light theme vars */
 }
 
-body.dark-theme {
-    background-color: var(--background-color-dark);
-    color: var(--text-color-dark);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-/* Header & Navigation */
-header {
+/* Specific elements to ensure they get the right initial color */
+header, footer {
     background-color: var(--header-footer-bg-light);
     color: var(--header-footer-text-light);
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
+nav ul li a, .logo a {
+    color: var(--header-footer-text-light);
+}
+.theme-toggle {
+    color: var(--header-footer-text-light);
+}
+.hero-text h1, .hero-text p {
+    color: var(--header-footer-text-light); /* Hero text often matches header for contrast */
+}
+.section h2, .section p, .project-item h3, .project-item p, .skill-category h3, .skill-category li, .contact-info p {
+    color: var(--text-color-light);
+}
+.section h2::after, .profile-pic, .project-link, .skill-category li::before, .contact-info a, .contact-info .fas, .contact-info .fab, .primary-btn, .secondary-btn {
+    color: var(--link-color-light);
+}
+
+
+/* General transition for all elements affected by theme change */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+/* All other styles (header-content, logo, nav, hero-section, about-content, profile-pic, project-grid, skill-category, contact-info, btn, whatsapp-btn, scroll-buttons, scroll-btn, chatbot-container, chatbot-popup, chatbot-header, chatbot-close-btn, chatbot-messages, message, chatbot-input-area, chatbot-input, chatbot-send-btn, chatbot-disclaimer, and all media queries) remain the same as the previous full `style.css` code. */
+
+/* Copy and paste the rest of the style.css code from the previous response here,
+   starting from `body.dark-theme header { ... }` down to the end of the `@media (max-width: 768px) { ... }` block. */
+
+/* --- REST OF THE CSS CODE (UNCHANGED FROM PREVIOUS RESPONSE) --- */
 
 body.dark-theme header {
     background-color: var(--header-footer-bg-dark);
     color: var(--header-footer-text-dark);
 }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo a {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--header-footer-text-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-body.dark-theme .logo a {
-    color: var(--header-footer-text-dark);
-}
-
 .logo a:hover {
-    color: var(--link-color-light); /* Or a specific highlight color */
+    color: var(--hover-color-light); /* Or a specific highlight color */
 }
 body.dark-theme .logo a:hover {
-    color: var(--link-color-dark);
+    color: var(--hover-color-dark);
 }
 
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    color: var(--header-footer-text-light);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-body.dark-theme nav ul li a {
-    color: var(--header-footer-text-dark);
-}
 
 nav ul li a:hover {
-    color: var(--link-color-light);
+    color: var(--hover-color-light);
 }
 
 body.dark-theme nav ul li a:hover {
-    color: var(--link-color-dark);
+    color: var(--hover-color-dark);
 }
 
 /* Theme Toggle Button */
@@ -925,4 +894,3 @@ body.dark-theme .chatbot-disclaimer {
     .whatsapp-btn {
         bottom: 130px; /* Adjust WhatsApp button position */
     }
-}
